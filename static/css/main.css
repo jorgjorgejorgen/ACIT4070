@@ -1,0 +1,67 @@
+html, body {
+    background-color: #FFFFF;
+    font-size: 16px;
+    line-height: rem;
+    font-weight: 500;
+}
+
+.navbar-nav {
+    margin-bottom: 3rem;
+
+}
+.nav-link {
+    color: black !important;
+    font-size: 1.25em;
+    margin-left:35px;
+
+}
+
+.box-element {
+    background-color: #FFFFF;
+    border-radius:4px;
+    box-shadow: 0 3px 10px 0 rgb(0 0 0 / 10%);
+    padding: 0.95rem;
+    margin-bottom: 1.5rem;
+
+
+}
+
+#train-icon {
+    width: 26px;
+    display: inline-block;
+    margin-right: 0.5rem;
+}
+
+.hidden {
+    display: none;
+}
+
+
+.ride-ride {
+    font-size: 1.1rem;
+}
+
+.ride-time {
+    font-size: 1.75rem;
+    font-weight: 700;
+}
+
+.ride-price {
+    margin-top: 2rem;
+    font-weight: 600;
+}
+
+.ride-date {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+#buy-ticket-btn {
+ margin: 0 auto;
+}
+
+.box {
+    background-color: #;
+    margin: 2rem;
+    height:5rem;
+}
