@@ -1,0 +1,26 @@
+{% extends 'rides/layouts.html' %}
+{% load static %}
+{% block body %}
+
+<div class="col-xs-12 col-lg-6">
+{% for ride in rides %} <!-- Loop items in Ride. Print elements in columns -->
+    <div class="box-element">
+        <div class="row align-items-end"> <!-- Row width is 12 default. -->
+            <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7">
+                <ul class="list-unstyled">
+                    <li class="ride-date">{{ ride.date }}</li>
+                    <li class="ride-time">{{ ride.time_start }}–{{ ride.time_end }}</li>
+                    <li class="ride-ride"><img  id="train-icon" src="{% static 'images/train-icon.png' %}">{{ ride.origin }} to {{ ride.destination }}</li>
+                </ul>
+            </div>
+            <div class="col">
+                <a data-ride="{{ride.id}}" data-action="add" class="btn btn-success btn-lg float-end add-btn update-cart" id="buy-ticket-btn" role="button">Buy {{ ride.price }} kr</a>
+            </div>
+        </div>
+    </div>
+{% endfor %}
+</div>
+
+
+
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends "rides/layouts.html" %}
+{% load static %}
+{% block body %}
+<h2>My tickets</h2>
+<div class="col-xs-12 col-lg-6">
+
+
+    {% for order in orders %}
+
+    <div class="box-element">
+        <div class="row align-items-end"> <!-- Row width is 12 default. -->
+            <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7">
+                <ul class="list-unstyled">
+                    <li class="ride-date">Time ordered: {{ order.date_ordered }}</li>
+                    <li class="ride-date">Validation ID: {{ order.transaction_id }}</li>
+                    <li class="ride">{{ order.ride }}</li>
+                    <li class="ticket-type">1 Adult, Non-refundable</li>
+                    <li class="ticket-seat">Seat 42, Carriage 8</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+    {% endfor %}
+
+
+</div>
+
+
+{% endblock %}

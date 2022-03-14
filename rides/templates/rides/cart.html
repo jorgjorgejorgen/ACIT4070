@@ -1,0 +1,55 @@
+{% extends "rides/layouts.html" %}
+{% load static %}
+{% block body %}
+
+<h2>Confirm travel</h2>
+<div class="col-xs-12 col-sm-12 col-md-7 col-lg-7">
+    <div class="box-element">
+         {% for ticket in tickets %}
+         <div>
+            <a href="{% url 'index' %}" data-ride="{{ticket.ride.id}}" data-action="remove" class="btn btn-outline-dark btn-lg update-cart" id="btn-back-delete" role="button">Find other travel</a>
+        </div>
+        {% endfor %}
+        {% for ticket in tickets %}
+        <div class="row align-items-end"> <!-- Row width is 12 default. -->
+        <!-- Loop items in Ride. Print elements in columns -->
+        <ul class="list-unstyled">
+            <li class="ride">{{ ticket.ride.origin }} - {{ ticket.ride.destination }}</li>
+            <li class="ride-date">{{ ticket.ride.date }}</li>
+            <li class="ride-time">{{ ticket.ride.time_start }} - {{ ticket.ride.time_end }}</li>
+            <li class="ticket-type">1 Adult, Non-refundable</li>
+            <li class="ticket-seat">Seat 42, Carriage 8</li>
+            <li class="price">Total: {{ ticket.ride.price }} kr</li>
+        </ul>
+        {% endfor %}
+            <div class="row-12">
+            <a href="{% url 'checkout' %}" class="btn btn-success btn-lg float-end add-btn update-cart" id="buy-ticket-btn" role="button">Checkout</a>
+        </div>
+    </div>
+    </div>
+    </div>
+
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
